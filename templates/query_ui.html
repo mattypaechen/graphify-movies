@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Movie Graph Exploration Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/static/favicon.png" />
+  <link rel="stylesheet" href="/static/query_ui.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Movie Graph Exploration Dashboard</h1>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <label>API Base URL</label>
+          <input id="baseUrl" value="{{ base_url }}">
+        </div>
+        <div>
+          <label>Select Query</label>
+          <select id="endpoint">
+            {% for e in endpoints %}
+              <option value="{{ e }}">{{ e }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <button id="runBtn">Send</button>
+        </div>
+      </div>
+
+      <div id="paramForm"></div>
+      <div id="bodyForm" style="display:none;"></div>
+      <div class="muted" id="reqPreview"></div>
+    </div>
+
+    <div class="card">
+      <strong>Response</strong>
+      <div id="tableWrap" style="display:none;"></div>
+    </div>
+  </div>
+</body>
+<script src="/static/query_ui.js"></script>
+</html>

@@ -1,0 +1,127 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 960px;
+  margin: auto;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+button {
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px;
+  gap: 16px;
+  align-items: end;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+}
+
+th {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#out {
+  display: none;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+/* Let the response area grow and scroll when needed */
+#tableWrap {
+  display: none;
+  overflow: auto;         
+  max-height: 70vh;       
+  padding-bottom: 4px;
+}
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+th, td {
+  vertical-align: top;
+  white-space: normal;
+  word-break: break-word;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+}
