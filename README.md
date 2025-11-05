@@ -24,7 +24,7 @@ The app leverages Neo4j as the backend database and a Flask API to serve movie a
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/kahlilwassell/KW_MC_Initial_DB_Final_Project_Repo.git
+git@github.com:mattypaechen/graphify-movies.git
 ```
 
 ### 2. Create A Virtual Environment
